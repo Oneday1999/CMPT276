@@ -1,4 +1,4 @@
-[h1]The "AccountAble" is an innovative personal finance tool tailored for the Android platform.
+The "AccountAble" is an innovative personal finance tool tailored for the Android platform.
 Designed to streamline the complexities of financial tracking, it allows users to diligently
 record daily income and expenses. Beyond mere recording, it offers an integrated monthly
 summary, a repository of historical transactions for retrospective analyses, and interactive
