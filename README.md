@@ -13,3 +13,21 @@ search functionality ensures users can swiftly retrieve and analyze specific fin
 enhancing their decision-making process. With a blend of user-centric design and analytical
 prowess, this application is poised to be an indispensable asset for those seeking clarity in
 their financial landscape.
+
+**Customer:**
+Whether you're a budget-conscious student, a diligent professional, or a family-focused
+homeowner, AccountAble will give your financial needs. It provides a user-friendly platform
+for recording expenses, income, savings, investment and stocks, enabling you to stay
+organized, make informed decisions to secure your financial future. Say goodbye to financial
+stress and hello to financial empowerment.
+
+**Competitive Analysis:**
+Firstly, while competitors might offer monthly summaries, few maintain a comprehensive
+historical transaction repository. This allows users of "AccountAble" to delve deeper into
+their financial history, providing a holistic view of their financial journey. Secondly,
+"AccountAble" prides itself on its user-centric design. This means intuitive navigation, clear
+layouts, and a seamless experience. Many competitors either clutter their interfaces with ads
+or unnecessary features, or they lack the streamlined design that "AccountAble" offers.
+However, AccountAble still has some weaknesses. For instance, Only being exclusive to the
+Android platform might limit its user base, and future accounting programs entering the
+market might borrow our unique features, affecting user share.
