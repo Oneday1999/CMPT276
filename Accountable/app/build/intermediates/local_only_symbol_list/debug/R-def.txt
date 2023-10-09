@@ -1,0 +1,34 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color gray
+color purple_200
+color purple_500
+color purple_700
+color teal_200
+color teal_700
+color white
+drawable accountable_icon
+drawable accounting
+drawable background_sign_in
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable sing_in_submit_btn
+font sign_in
+id password_text
+id remember_checkbox
+id sign_in_button
+id sign_in_img
+id user_id_text
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string log_in
+string password
+string remember_password
+string sign_in
+string uid
+style Theme.Accountable
+xml backup_rules
+xml data_extraction_rules
