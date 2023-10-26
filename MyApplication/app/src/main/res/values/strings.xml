@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Accountable</string>
     <string name="monthly_cost">Month Expenses</string>
     <string name="monthly_income">Monthly Income</string>
     <string name="budget_surplus">Budget Surplus</string>

@@ -4,91 +4,113 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/Grey1">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="30dp"
-        android:background="@color/white">
+        android:background="@color/white"
+        android:padding="20dp">
+
         <TextView
             android:id="@+id/list_main_head_expenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/monthly_cost"
-            android:textSize="15dp"
-            android:textStyle="bold"/>
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/list_main_head_out"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$ 0"
             android:layout_below="@id/list_main_head_expenses"
-            android:textSize="35dp"
-            android:textStyle="bold"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:textColor="@color/Black"/>
+            android:text="$ 0"
+            android:textColor="@color/Black"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <ImageView
             android:id="@+id/list_main_head_hide"
             android:layout_width="20dp"
             android:layout_height="20dp"
-            android:layout_toRightOf="@id/list_main_head_expenses"
-            android:src="@mipmap/hide"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="2dp"/>
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/list_main_head_expenses"
+            android:src="@mipmap/hide" />
 
         <TextView
             android:id="@+id/list_main_head_income"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/monthly_income"
-            android:layout_below="@id/list_main_head_out"/>
+            android:layout_below="@id/list_main_head_out"
+            android:text="@string/monthly_income" />
+
         <TextView
             android:id="@+id/list_main_head_income_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:text="$ 0"
             android:layout_below="@id/list_main_head_out"
-            android:layout_toRightOf="@id/list_main_head_income"
-            android:layout_marginLeft="5dp"/>
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/list_main_head_income"
+            android:text="$ 0"
+            android:textColor="@color/black" />
+<!--        <TextView-->
+<!--            android:id="@+id/list_main_head_budget_num"-->
+<!--            android:layout_width="20dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignBottom="@id/list_main_head_income"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginLeft="5dp"-->
+<!--            android:layout_toRightOf="@id/list_main_head_income"-->
+<!--            android:text="$ 0"-->
+<!--            android:textColor="@color/black" />-->
+
         <TextView
+            android:id="@+id/list_main_head_budget_num"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/budget_surplus"
-            android:layout_below="@id/list_main_head_income"/>
+            android:layout_alignBottom="@id/list_main_head_income"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"
+            android:text="$ 0"/>
+
         <TextView
             android:id="@+id/list_main_head_budget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$ 0"
-            android:textColor="@color/black"
-            android:layout_below="@id/list_main_head_income"
-            android:layout_toRightOf="@id/list_main_head_income"
-            android:layout_marginLeft="5dp"/>
+            android:text="@string/budget_surplus"
+            android:layout_alignBottom="@id/list_main_head_income"
+            android:layout_toLeftOf="@id/list_main_head_budget_num" />
 
         <ImageButton
             android:id="@+id/list_main_head_map"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@mipmap/map"
-            android:layout_alignParentRight="true"
             android:layout_alignTop="@id/list_main_head_expenses"
-            android:layout_marginRight="10dp"/>
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:src="@mipmap/map" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="View Chart Analysis"
-            android:layout_alignParentRight="true"
-            android:layout_below="@id/list_main_head_map"/>
+            android:layout_below="@id/list_main_head_budget"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:drawablePadding="10dp"
+            android:textColor="@color/my_green"
+            android:text="View Chart Analysis" />
     </RelativeLayout>
 
     <TextView
         android:id="@+id/list_main_head_todayIncomeOutcome"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Today Costs $0 Income $0"/>
+        android:text="Today Costs $0  Income $0"/>
 
 
 </LinearLayout>
