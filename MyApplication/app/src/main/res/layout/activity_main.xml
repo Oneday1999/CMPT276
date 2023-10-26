@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bgg"
-    tools:context=".MainActivity">
+    tools:context=".login_Activity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -108,6 +108,7 @@
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:text="Login"
+            android:onClick="onClick"
             app:cornerRadius="32dp"/>
 
 

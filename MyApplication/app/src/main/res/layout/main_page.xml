@@ -20,7 +20,6 @@
             android:padding="15dp"
             android:textSize="18dp"
             android:textColor="@color/Black" />
-
         <ImageView
             android:id="@+id/main_iv_search"
             android:layout_width="wrap_content"
