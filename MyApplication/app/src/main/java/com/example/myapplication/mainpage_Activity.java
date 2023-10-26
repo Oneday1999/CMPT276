@@ -12,3 +12,5 @@ public class mainpage_Activity extends AppCompatActivity {
         setContentView(R.layout.main_page);
     }
 }
+
+//test for git
