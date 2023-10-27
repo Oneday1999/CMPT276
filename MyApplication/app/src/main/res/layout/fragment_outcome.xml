@@ -12,7 +12,7 @@
         android:background="@color/white"
         android:padding="10dp">
         <ImageView
-            android:id="@+id/fragment_record_business"
+            android:id="@+id/fragment_record_iv"
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@mipmap/icon_business"/>
@@ -21,7 +21,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Business"
-            android:layout_toRightOf="@id/fragment_record_business"
+            android:layout_toRightOf="@id/fragment_record_iv"
             android:layout_centerVertical="true"
             android:textSize="16sp"
             android:textStyle="bold"

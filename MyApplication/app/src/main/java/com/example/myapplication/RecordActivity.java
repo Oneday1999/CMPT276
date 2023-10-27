@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import com.example.myapplication.adapter.RecordPagerAdapter;
-import com.example.myapplication.frag_record.OutcomeFragment;
 import com.example.myapplication.frag_record.IncomeFragment;
+import com.example.myapplication.frag_record.OutcomeFragment;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
