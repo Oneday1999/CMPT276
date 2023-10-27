@@ -14,10 +14,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@mipmap/error"
+            android:onClick="onClick"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"/>
         <com.google.android.material.tabs.TabLayout
-            android:id="@+id/record_button"
+            android:id="@+id/record_tabs"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
@@ -28,7 +29,7 @@
             app:tabIndicatorColor="@color/black"/>
     </RelativeLayout>
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/record_viewpage"
+        android:id="@+id/record_vp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

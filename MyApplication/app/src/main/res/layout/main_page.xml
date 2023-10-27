@@ -22,6 +22,7 @@
         <ImageView
             android:id="@+id/main_iv_search"
             android:layout_width="50dp"
+            android:onClick="onClick"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:padding="10dp"
@@ -45,12 +46,14 @@
         android:layout_height="50dp"
         android:src="@mipmap/menu"
         android:layout_alignParentRight="true"
+        android:onClick="onClick"
         android:layout_alignParentBottom="true"
         android:layout_margin="20dp"/>
     <ImageButton
         android:id="@+id/main_btn_record"
         android:layout_width="50dp"
         android:layout_height="50dp"
+        android:onClick="onClick"
         android:src="@mipmap/record"
         android:layout_alignBottom="@id/main_btn_menu"
         android:layout_toStartOf="@id/main_btn_menu"/>
