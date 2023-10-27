@@ -24,7 +24,8 @@
             android:layout_centerHorizontal="true"
             app:tabGravity="center"
             app:tabMode="fixed"
-            app:tabTextColor="@color/Grey2"
+            android:background="@color/Grey1"
+            app:tabTextColor="@color/black"
             app:tabSelectedTextColor="@color/black"
             app:tabIndicatorColor="@color/black"/>
     </RelativeLayout>
