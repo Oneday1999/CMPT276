@@ -27,7 +27,6 @@ public class IncomeFragment extends BaseRecordFragment {
         List<TypeBean> inlist = DBManager.getTypeList(1);
         typeList.addAll(inlist);
         adapter.notifyDataSetChanged();
-        typeTv.setText("Other");
         typeIv.setImageResource(R.mipmap.icon_other);
     }
     public void saveAccountToDB(){

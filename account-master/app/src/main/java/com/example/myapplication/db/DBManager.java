@@ -1,5 +1,6 @@
 package com.example.myapplication.db;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -29,6 +30,7 @@ public class DBManager {
         return list;
     }
 
+
     /*
     insert an element into the account table
      */
@@ -45,5 +47,24 @@ public class DBManager {
         values.put("kind",bean.getKind());
 
         db.insert("accounttb",null,values);
+    }
+
+    public static List<AccountBean>getAccountListOneDayFromAccounttb(int year,int month,int day){
+        List<AccountBean>list = new ArrayList<>();
+        String sql = "select * from accounttb where year=? and month=? and day=? order by id desc";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", day + ""});
+
+        while (cursor.moveToNext()) {
+            @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("id"));
+            @SuppressLint("Range") String typename = cursor.getString(cursor.getColumnIndex("typename"));
+            @SuppressLint("Range") String note = cursor.getString(cursor.getColumnIndex("note"));
+            @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("time"));
+            @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("sImageId"));
+            @SuppressLint("Range") int kind = cursor.getInt(cursor.getColumnIndex("kind"));
+            @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("money"));
+            AccountBean accountBean = new AccountBean(id, typename, sImageId, note, money, time, year, month, day, kind);
+            list.add(accountBean);
+        }
+        return list;
     }
 }

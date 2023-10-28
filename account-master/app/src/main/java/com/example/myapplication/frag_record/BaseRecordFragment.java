@@ -219,8 +219,6 @@ public class BaseRecordFragment extends Fragment implements View.OnClickListener
 
 
     }
-
-
 }
 
 

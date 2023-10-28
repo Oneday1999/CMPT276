@@ -2,6 +2,7 @@ package com.example.myapplication.db;
 
 public class AccountBean {
     int id;
+    int sImageId;
     String typename;
     int imageId;
     String notes;
@@ -95,6 +96,14 @@ public class AccountBean {
     public AccountBean() {
     }
 
+    public int getsImageId() {
+        return sImageId;
+    }
+
+    public String getComment() {
+        return notes;
+    }
+
     public AccountBean(int id, String typename, int imageId, String notes, float money, String time, int year, int month, int day, int kind) {
         this.id = id;
         this.typename = typename;
@@ -107,4 +116,6 @@ public class AccountBean {
         this.day = day;
         this.kind = kind;
     }
+
+
 }
