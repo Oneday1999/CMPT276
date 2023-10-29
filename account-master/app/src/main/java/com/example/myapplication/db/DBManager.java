@@ -57,9 +57,9 @@ public class DBManager {
         while (cursor.moveToNext()) {
             @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("id"));
             @SuppressLint("Range") String typename = cursor.getString(cursor.getColumnIndex("typename"));
-            @SuppressLint("Range") String note = cursor.getString(cursor.getColumnIndex("note"));
+            @SuppressLint("Range") String note = cursor.getString(cursor.getColumnIndex("notes"));
             @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("time"));
-            @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("sImageId"));
+            @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("imageId"));
             @SuppressLint("Range") int kind = cursor.getInt(cursor.getColumnIndex("kind"));
             @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("money"));
             AccountBean accountBean = new AccountBean(id, typename, sImageId, note, money, time, year, month, day, kind);

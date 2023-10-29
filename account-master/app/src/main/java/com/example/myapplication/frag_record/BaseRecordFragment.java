@@ -113,7 +113,7 @@ public class BaseRecordFragment extends Fragment implements View.OnClickListener
         int month = calendar.get(Calendar.MONTH) + 1;
         int day = calendar.get(Calendar.DAY_OF_MONTH);
         accountBean.setYear(year);
-        accountBean.setMoney(month);
+        accountBean.setMonth(month);
         accountBean.setDay(day);
     }
 
@@ -160,7 +160,7 @@ public class BaseRecordFragment extends Fragment implements View.OnClickListener
                 //click the button, get the record and save to database, then return the last page
                 String moneyStr = moneyEt.getText().toString();
                 TextUtils.isEmpty(moneyStr);
-                if(!TextUtils.isEmpty(moneyStr) || moneyStr.equals("0")){
+                if(TextUtils.isEmpty(moneyStr) || moneyStr.equals("0")){
                     getActivity().finish();
                     return;
                 }
