@@ -96,10 +96,6 @@ public class AccountBean {
     public AccountBean() {
     }
 
-    public int getsImageId() {
-        return sImageId;
-    }
-
     public String getComment() {
         return notes;
     }

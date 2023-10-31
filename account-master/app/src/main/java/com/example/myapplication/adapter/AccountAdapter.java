@@ -59,10 +59,10 @@ public class AccountAdapter extends BaseAdapter {
             holder = (ViewHolder) convertView.getTag();
         }
         AccountBean bean = mDatas.get(position);
-        holder.typeIv.setImageResource(bean.getsImageId());
+        holder.typeIv.setImageResource(bean.getImageId());
         holder.typeTv.setText(bean.getTypename());
         holder.noteTv.setText(bean.getComment());
-        holder.moneyTv.setText("￥ "+bean.getMoney());
+        holder.moneyTv.setText("$ "+bean.getMoney());
         if (bean.getYear()==year&&bean.getMonth()==month&&bean.getDay()==day) {
             String time = bean.getTime().split(" ")[1];
             Log.d(time, "getView: ");

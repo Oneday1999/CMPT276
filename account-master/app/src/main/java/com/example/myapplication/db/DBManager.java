@@ -5,6 +5,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,6 +40,7 @@ public class DBManager {
         ContentValues values = new ContentValues();
         values.put("typename",bean.getTypename());
         values.put("imageId",bean.getImageId());
+        Log.d(String.valueOf(bean.getImageId()), "image id is: ");
         values.put("notes",bean.getNotes());
         values.put("money",bean.getMoney());
         values.put("time",bean.getTime());
@@ -52,7 +55,8 @@ public class DBManager {
     public static List<AccountBean>getAccountListOneDayFromAccounttb(int year,int month,int day){
         List<AccountBean>list = new ArrayList<>();
         String sql = "select * from accounttb where year=? and month=? and day=? order by id desc";
-        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", day + ""});
+        @SuppressLint("Recycle") Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", day + ""});
+        Log.d(String.valueOf(cursor.getCount()), "getAccountListOneDayFromAccounttb: ");
 
         while (cursor.moveToNext()) {
             @SuppressLint("Range") int id = cursor.getInt(cursor.getColumnIndex("id"));
@@ -60,6 +64,7 @@ public class DBManager {
             @SuppressLint("Range") String note = cursor.getString(cursor.getColumnIndex("notes"));
             @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("time"));
             @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("imageId"));
+            Log.d(String.valueOf(sImageId), "image id get is: ");
             @SuppressLint("Range") int kind = cursor.getInt(cursor.getColumnIndex("kind"));
             @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("money"));
             AccountBean accountBean = new AccountBean(id, typename, sImageId, note, money, time, year, month, day, kind);
