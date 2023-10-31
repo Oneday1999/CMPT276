@@ -5,6 +5,10 @@
     <string name="budget_surplus">Budget Surplus</string>
     <string name="add_remark">add notes</string>
     <string name="remark">note</string>
+    <string name="about">about</string>
+    <string name="setting">setting</string>
+    <string name="history_record">history_record</string>
+    <string name="account_info">account_info</string>
     <string name="ensure">confirm</string>
     <string name="cancel">cancel</string>
     <string name="please_input_time">Please input time（24 hour clock)</string>

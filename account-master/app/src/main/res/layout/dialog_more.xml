@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp"
+    android:background="@color/Grey2">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/dialog_more_btn_about"
+            style="@style/dialogmoreStyle"
+            android:drawableTop="@mipmap/it_about"
+            android:text="@string/about"/>
+
+        <Button
+            android:id="@+id/dialog_more_btn_setting"
+            style="@style/dialogmoreStyle"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#FFFFFF"
+            android:drawableTop="@mipmap/it_setting"
+            android:text="@string/setting" />
+
+        <Button
+            android:id="@+id/dialog_more_btn_record"
+            style="@style/dialogmoreStyle"
+            android:drawableTop="@mipmap/it_record"
+            android:text="@string/history_record" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/dialog_more_btn_info"
+            style="@style/dialogmoreStyle"
+            android:drawableTop="@mipmap/it_info"
+            android:text="@string/account_info"
+            android:layout_marginRight="30dp"/>
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/dialog_more_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/error"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
