@@ -50,19 +50,12 @@ public class NotesDialog extends Dialog implements View.OnClickListener {
     @SuppressLint("NonConstantResourceId")
     public void onClick(View v){
        if(v.getId() ==  R.id.dialog_notes_btn_cancel){
-           cancel();} else {
-           return;
-
-           /* case R.id.dialog_notes_btn_cancel:
-                cancel();
-                break;
-            case R.id.dialog_notes_btn_ensure:
-                if (onEnsureListener != null){
-                    onEnsureListener.onEnsure();
-                }
-                break;*/
-        }
-
+           cancel();
+       } else {
+           if (onEnsureListener!=null) {
+               onEnsureListener.onEnsure();
+           }
+       }
     }
     public String getEditText(){
         return et.getText().toString().trim();

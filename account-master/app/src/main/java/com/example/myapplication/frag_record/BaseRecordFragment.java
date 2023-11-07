@@ -182,7 +182,7 @@ public class BaseRecordFragment extends Fragment implements View.OnClickListener
     public void onClick(View v){
         if(v.getId()==R.id.fragment_record_notes){
             showNotesDialog();
-        }else if (v.getId()==R.id.fragment_record_time){
+        } else if (v.getId()==R.id.fragment_record_time){
             showTimeDialog();
         }
     }

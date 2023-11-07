@@ -1,5 +1,6 @@
 package com.example.myapplication.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -46,19 +47,7 @@ public class SelectTimeDialog extends Dialog implements View.OnClickListener {
         hideDatePickerHeader();
     }
 
-    /*public static class myConstants{
-        public static final int cancel_view = R.id.dialog_time_btn_cancel;
-        public static final int ensure_view = R.id.dialog_time_btn_ensure;
-    }*/
     public void onClick(View v){
-        /*switch (v.getId()){
-            case myConstants.cancel_view:
-                cancel();
-                break;
-            case myConstants.ensure_view:
-
-                break;
-        }*/
         if (v.getId() == R.id.dialog_time_btn_cancel){
             cancel();
         }else if (v.getId() == R.id.dialog_time_btn_ensure){
@@ -66,6 +55,15 @@ public class SelectTimeDialog extends Dialog implements View.OnClickListener {
             int month = datePicker.getMonth()+1;// selected month
             int day = datePicker.getDayOfMonth();
             String monthStr = String.valueOf(month);
+            if (month<10){
+                monthStr = "0"+month;
+            }
+
+            String dayStr = String.valueOf(day);
+            if (day<10){
+                dayStr="0" + day;
+            }
+
             String hourStr = hourEt.getText().toString();
             String minuteStr = minuteEt.getText().toString();
             int hour = 0;
@@ -73,25 +71,32 @@ public class SelectTimeDialog extends Dialog implements View.OnClickListener {
                 hour = Integer.parseInt(hourStr);
                 hour = hour%24;
             }
+
             int minute = 0;
             if(!TextUtils.isEmpty(minuteStr)){
                 minute = Integer.parseInt(minuteStr);
                 minute = minute%60;
             }
-            String dayStr = String.valueOf(day);
-            String yearStr = String.valueOf(year);
+
             hourStr = String.valueOf(hour);
             minuteStr = String.valueOf(minute);
-            String timeFormat = monthStr+"/"+dayStr+"/"+yearStr+" "+ hourStr+":"+minuteStr;
+            if (hour<10){
+                hourStr="0"+hour;
+            }
+            if (minute<10){
+                minuteStr="0"+minute;
+            }
+
+            String timeFormat = year + " / " + monthStr + " / " + dayStr + " / "+hourStr + " : " + minuteStr;
             if(onEnsureListener!=null){
                 onEnsureListener.onEnsure(timeFormat,year, month,day);
             }
             cancel();
-            return;
         }
 
     }
 
+    @SuppressLint("DiscouragedApi")
     private void hideDatePickerHeader(){
         ViewGroup rootView = (ViewGroup) datePicker.getChildAt(0);
         if(rootView == null){

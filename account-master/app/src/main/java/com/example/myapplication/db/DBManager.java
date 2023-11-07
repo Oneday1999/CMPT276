@@ -40,7 +40,6 @@ public class DBManager {
         ContentValues values = new ContentValues();
         values.put("typename",bean.getTypename());
         values.put("imageId",bean.getImageId());
-        Log.d(String.valueOf(bean.getImageId()), "image id is: ");
         values.put("notes",bean.getNotes());
         values.put("money",bean.getMoney());
         values.put("time",bean.getTime());
@@ -49,6 +48,10 @@ public class DBManager {
         values.put("day",bean.getDay());
         values.put("kind",bean.getKind());
 
+        Log.d(String.valueOf(bean.getTime()), "time is: ");
+        Log.d(String.valueOf(bean.getYear()), "year is: ");
+        Log.d(String.valueOf(bean.getMonth()), "month is: ");
+        Log.d(String.valueOf(bean.getDay()), "day is: ");
         db.insert("accounttb",null,values);
     }
 
@@ -64,12 +67,35 @@ public class DBManager {
             @SuppressLint("Range") String note = cursor.getString(cursor.getColumnIndex("notes"));
             @SuppressLint("Range") String time = cursor.getString(cursor.getColumnIndex("time"));
             @SuppressLint("Range") int sImageId = cursor.getInt(cursor.getColumnIndex("imageId"));
-            Log.d(String.valueOf(sImageId), "image id get is: ");
             @SuppressLint("Range") int kind = cursor.getInt(cursor.getColumnIndex("kind"));
             @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("money"));
             AccountBean accountBean = new AccountBean(id, typename, sImageId, note, money, time, year, month, day, kind);
             list.add(accountBean);
         }
         return list;
+    }
+
+    public static float getSumMoneyOneDay (int year, int month, int day, int kind) {
+        float total = 0.0f;
+        String sql = "select sum(money) from accounttb where year=? and month=? and day=? and kind=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", day + "", kind + ""});
+        // Traverse
+        if (cursor.moveToFirst()) {
+            @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("sum(money)"));
+            total = money;
+        }
+        return total;
+    }
+
+    public static float getSumMoneyOneMonth (int year, int month, int kind) {
+        float total = 0.0f;
+        String sql = "select sum(money) from accounttb where year=? and month=? and kind=?";
+        Cursor cursor = db.rawQuery(sql, new String[]{year + "", month + "", kind + ""});
+        // Traverse
+        if (cursor.moveToFirst()) {
+            @SuppressLint("Range") float money = cursor.getFloat(cursor.getColumnIndex("sum(money)"));
+            total = money;
+        }
+        return total;
     }
 }
