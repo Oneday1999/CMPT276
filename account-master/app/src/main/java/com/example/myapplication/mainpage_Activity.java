@@ -82,7 +82,7 @@ public class mainpage_Activity extends AppCompatActivity implements View.OnClick
     private void setTopTvShow() {
         float incomeOneDay = DBManager.getSumMoneyOneDay(year, month, day, 1);
         float outcomeOneDay = DBManager.getSumMoneyOneDay(year, month, day, 0);
-        String infoOneDay = "Outcome today $     "+outcomeOneDay+" Income today$"+incomeOneDay;
+        String infoOneDay = "Outcome today $"+ " " + outcomeOneDay+" Income today$"+incomeOneDay;
         topConTv.setText(infoOneDay);
 
         float incomeOneMonth = DBManager.getSumMoneyOneMonth(year, month, 1);
@@ -117,9 +117,6 @@ public class mainpage_Activity extends AppCompatActivity implements View.OnClick
     // 加载数据库数据
     private void loadDBData() {
         List<AccountBean> list = DBManager.getAccountListOneDayFromAccounttb(year, month, day);
-        if (list.isEmpty()) {
-            Log.d("empty", "loadDBData: ");
-        }
         mDatas.clear();
         mDatas.addAll(list);
         adapter.notifyDataSetChanged();
