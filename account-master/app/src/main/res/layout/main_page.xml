@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:padding="10dp"
-            android:src="@mipmap/search" />
+            android:src="@drawable/baseline_logout_24" />
     </RelativeLayout>
 
     <ListView

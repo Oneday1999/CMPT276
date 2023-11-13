@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.myapplication.adapter.AccountAdapter;
@@ -135,7 +137,9 @@ public class mainpage_Activity extends AppCompatActivity implements View.OnClick
             MoreDialog moreDialog= new MoreDialog(this);
             moreDialog.show();
             moreDialog.setDialogSize();
-        }
+        } else if (view.getId() == R.id.main_iv_search) {
+        logoutMenu(mainpage_Activity.this);
+    }
     }
 
     private void showBudgetDialog() {
@@ -151,5 +155,24 @@ public class mainpage_Activity extends AppCompatActivity implements View.OnClick
             float syMoney = money-outcomeOneMonth;
             topbudgetTv.setText("$"+syMoney);
         });
+    }
+    private void logoutMenu(mainpage_Activity mainpage_Activity){
+        AlertDialog.Builder builder = new AlertDialog.Builder(mainpage_Activity);
+        builder.setTitle("LOGOUT");
+        builder.setMessage("Are you sure you want to logout?");
+        builder.setNegativeButton("NO", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+        });
+        builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                finish();
+            }
+        });
+
+        builder.show();
     }
 }
