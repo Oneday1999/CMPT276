@@ -20,6 +20,7 @@ import com.example.myapplication.adapter.AccountAdapter;
 import com.example.myapplication.db.AccountBean;
 import com.example.myapplication.db.DBManager;
 import com.example.myapplication.utils.BudgetDialog;
+import com.example.myapplication.utils.MoreDialog;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -129,8 +130,11 @@ public class mainpage_Activity extends AppCompatActivity implements View.OnClick
             Intent it1 = new Intent(this, RecordActivity.class);  //跳转界面
             startActivity(it1);
         } else if (view.getId() == R.id.list_main_head_budget_num) {
-            Log.d("click", "onClick: ");
             showBudgetDialog();
+        } else if (view.getId() == R.id.main_btn_menu) {
+            MoreDialog moreDialog= new MoreDialog(this);
+            moreDialog.show();
+            moreDialog.setDialogSize();
         }
     }
 

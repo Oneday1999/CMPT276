@@ -32,6 +32,11 @@ public class DBManager {
         return list;
     }
 
+    public static void deleteAllAccount(){
+        String sql = "delete from accounttb";
+        db.execSQL(sql);
+    }
+
 
     /*
     insert an element into the account table

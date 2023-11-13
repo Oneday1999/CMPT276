@@ -24,6 +24,8 @@
         </activity>
         <activity android:name="com.example.myapplication.mainpage_Activity" />
         <activity android:name="com.example.myapplication.RecordActivity" />
+        <activity android:name="com.example.myapplication.AboutActivity" />
+        <activity android:name="com.example.myapplication.SettingActivity" />
     </application>
 
 </manifest>
