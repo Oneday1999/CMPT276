@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Accountable</string>
+    <string name="monthly_cost">Month Expenses</string>
+    <string name="monthly_income">Monthly Income</string>
+    <string name="budget_surplus">Budget Surplus</string>
+    <string name="add_remark">add notes</string>
+    <string name="remark">note</string>
+    <string name="ensure">confirm</string>
+    <string name="cancel">cancel</string>
+    <string name="please_input_time">Please input time（24 hour clock)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="set_budget">Set budget</string>
+    <string name="about">About</string>
+    <string name="setting">Setting</string>
+    <string name="about_appinfo">App info</string>
+    <string name="about_version">version</string>
+    <string name="about_1">1.2</string>
+    <string name="about_app">About app</string>
+    <string name="about_msg">Accountable helps users keep their daily accounts!</string>
+    <string name="about_developer">Developer</string>
+    <string name="about_me">Bowei Pan (301435285)\nLingyun Yang (301417391)\nKhant Naing (301540376)\nXiangxi Liu (301404954)\nZhenrui Liu (301470684)\nCheng Hong (301538447）\n</string>
+    <string name="about_code">Source code</string>
+    <string name="about_codeinfo">github: https://github.com/Oneday1999/CMPT276.git</string>
+    <string name="clear_all">Delete all</string>
+</resources>
